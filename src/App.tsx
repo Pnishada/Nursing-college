@@ -2,8 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProgramsPage from "./pages/ProgramsPage";
-import About from "./components/homepageComponents/About";
-import ApplyPage from "./pages/ApplyPage"
+import ApplyPage from "./pages/ApplyPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
 import NewsPage from "./pages/NewsPage";
 import FacultyPage from "./pages/FacultyPage";
@@ -12,20 +11,16 @@ import EventsPage from "./pages/EventsPage";
 import CareersPage from "./pages/CareersPage";
 import FAQPage from "./pages/FAQPage";
 import GalleryPage from "./pages/GalleryPage";
-<<<<<<< HEAD
 import EventDetailsPage from "./pages/EventDetailsPage";
-
-=======
 import Contact from "./pages/contact";
 import AboutPage from "./pages/AboutPage";
 import DownloadsPage from "./pages/DownloadsPage";
->>>>>>> b4efcd9 (First Commit)
+import BlogPage from "./pages/BlogPage";
 
 function App() {
   return (
     <Router>
       <Routes>
-
         <Route path="/" element={<Home />} />
         <Route path="/programs" element={<ProgramsPage />} />
         <Route path="/apply" element={<ApplyPage />} />
@@ -38,14 +33,10 @@ function App() {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
-<<<<<<< HEAD
         <Route path="/events/:eventId" element={<EventDetailsPage />} />
-         
-=======
         <Route path="/contact" element={<Contact />} />
         <Route path="/downloads" element={<DownloadsPage />} />
->>>>>>> b4efcd9 (First Commit)
-        {/* <Route path="/blog" element={<BlogPage />} /> */}
+         <Route path="/blog" element={<BlogPage />} /> 
       </Routes>
     </Router>
   );
