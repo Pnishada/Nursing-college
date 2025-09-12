@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaMailBulk } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import logo from "../../assets/images/logo/logo.png";
-
 export default function Footer(): React.ReactElement {
   const [openLinks, setOpenLinks] = useState(false);
   const [openContact, setOpenContact] = useState(false);
@@ -28,12 +27,14 @@ export default function Footer(): React.ReactElement {
       <div className="max-w-7xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-10">
         {/* About */}
         <div>
+          <div className="flex items-center gap-3 mb-3">
           <img
             src={logo}
             alt="Institute of Nursing Logo"
-            className="h-12 mb-4"
+            className="h-12 w-auto object-contain"
           />
           <h4 className="text-lg font-bold text-white mb-3">Institute of Nursing</h4>
+          </div>  
           <p className="text-gray-200 leading-relaxed text-sm">
             Building the future of healthcare through education, compassion, and innovation.
           </p>

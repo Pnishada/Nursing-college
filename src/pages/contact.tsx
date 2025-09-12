@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-center w-full bg-gradient-to-b from-blue-50 via-white to-blue-100">
+      <div className="flex flex-col items-center w-full bg-gradient-to-b from-blue-100 via-white to-blue-100">
         {/* Hero Section */}
         <section className="w-full bg-gradient-to-r from-blue-200 to-indigo-600 py-20 text-center text-white shadow-lg">
           <h1 className="text-5xl font-extrabold mb-4">Contact Us</h1>

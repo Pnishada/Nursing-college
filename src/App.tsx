@@ -15,7 +15,7 @@ import DownloadsPage from "./pages/DownloadsPage";
 import BlogPage from "./pages/BlogPage";
 import StudentLifeDashboard from "./pages/StudentLifePage";
 import CareersPage from "./pages/CareersPage";
-
+import StudentLifePage from "./pages/StudentLifePage";
 
 
 function App() {
@@ -29,15 +29,17 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/news/:id" element={<NewsDetailPage />} />
         <Route path="/faculty" element={<FacultyPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/student-life" element={<StudentLifePage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/events/:eventId" element={<EventDetailsPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/downloads" element={<DownloadsPage />} />
-         <Route path="/blog" element={<BlogPage />} /> 
-         <Route path="/student-life" element={<StudentLifeDashboard />} />
-         <Route path="/careers" element={<CareersPage />} /> 
+        <Route path="/blog" element={<BlogPage />} /> 
+        <Route path="/student-life" element={<StudentLifeDashboard />} />
+        <Route path="/careers" element={<CareersPage />} /> 
         
       </Routes>
     </Router>
