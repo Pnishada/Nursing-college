@@ -12,7 +12,6 @@ export default function Navbar(): React.ReactElement {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Programs", path: "/programs" },
-    { name: "Admissions", path: "/apply" },
     { name: "Faculty", path: "/faculty" },
     { name: "Student Life", path: "/student-life" },
     { name: "Careers", path: "/careers" },

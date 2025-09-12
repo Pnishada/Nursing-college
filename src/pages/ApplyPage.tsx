@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { HiUser, HiMail, HiPhone, HiChat } from "react-icons/hi";
@@ -6,21 +6,28 @@ import { HiUser, HiMail, HiPhone, HiChat } from "react-icons/hi";
 export default function ApplyPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const programId = searchParams.get("program");
+  const programParam = searchParams.get("program");
 
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
     message: "",
+    program: programParam || "",
   });
 
   const [step, setStep] = useState(1);
 
+  useEffect(() => {
+    if (programParam) {
+      setFormData((prev) => ({ ...prev, program: programParam }));
+    }
+  }, [programParam]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleNext = () => setStep((prev) => Math.min(prev + 1, 2));
@@ -28,9 +35,9 @@ export default function ApplyPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData, "Program:", programId);
-    alert("Application submitted successfully!");
-    navigate("/Programs");
+    console.log("Form submitted:", formData);
+    alert(`Application for ${formData.program} submitted successfully!`);
+    navigate("/programs");
   };
 
   return (
@@ -44,7 +51,7 @@ export default function ApplyPage() {
         {/* Header */}
         <div className="mb-8 text-center md:text-left">
           <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
-            Apply {programId ? `for ${programId}` : ""}
+            Apply {formData.program ? `for ${formData.program}` : ""}
           </h1>
           <p className="text-gray-600 text-lg">
             Fill in the form below and our team will get in touch with you.
@@ -63,11 +70,30 @@ export default function ApplyPage() {
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
+              {/* Program (readonly) */}
               <div className="relative">
+                <label htmlFor="program" className="sr-only">
+                  Program
+                </label>
+                <input
+                  id="program"
+                  type="text"
+                  name="program"
+                  value={formData.program}
+                  readOnly
+                  className="w-full pl-3 py-3 border border-gray-200 rounded-xl bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+
+              <div className="relative">
+                <label htmlFor="fullName" className="sr-only">
+                  Full Name
+                </label>
                 <span className="absolute top-3 left-3 text-gray-400 text-lg">
                   <HiUser />
                 </span>
                 <input
+                  id="fullName"
                   type="text"
                   name="fullName"
                   placeholder="Full Name"
@@ -79,10 +105,14 @@ export default function ApplyPage() {
               </div>
 
               <div className="relative">
+                <label htmlFor="email" className="sr-only">
+                  Email Address
+                </label>
                 <span className="absolute top-3 left-3 text-gray-400 text-lg">
                   <HiMail />
                 </span>
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   placeholder="Email Address"
@@ -94,10 +124,14 @@ export default function ApplyPage() {
               </div>
 
               <div className="relative">
+                <label htmlFor="phone" className="sr-only">
+                  Phone Number
+                </label>
                 <span className="absolute top-3 left-3 text-gray-400 text-lg">
                   <HiPhone />
                 </span>
                 <input
+                  id="phone"
                   type="tel"
                   name="phone"
                   placeholder="Phone Number"
@@ -133,10 +167,14 @@ export default function ApplyPage() {
               className="space-y-6"
             >
               <div className="relative">
+                <label htmlFor="message" className="sr-only">
+                  Your message or questions
+                </label>
                 <span className="absolute top-3 left-3 text-gray-400 text-lg">
                   <HiChat />
                 </span>
                 <textarea
+                  id="message"
                   name="message"
                   placeholder="Your message or questions"
                   value={formData.message}

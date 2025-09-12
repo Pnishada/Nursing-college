@@ -208,11 +208,11 @@ function ProgramModal({ program, onClose }: ProgramModalProps) {
             </div>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <a
-                href={`/apply?program=${program.id}`}
+                href={`/apply?program=${encodeURIComponent(program.title)}`}
                 className="flex-1 flex items-center justify-center bg-red-500 text-white px-4 py-3 rounded-xl font-semibold shadow hover:bg-red-600 transition"
-              >
-                Apply Now
-              </a>
+                  >
+                  Apply Now
+                </a>
               <button
                 onClick={onClose}
                 className="flex-1 flex items-center justify-center border border-gray-200 px-4 py-3 rounded-xl hover:bg-gray-50 transition"

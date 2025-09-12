@@ -12,6 +12,8 @@ import EventsPage from "./pages/EventsPage";
 import CareersPage from "./pages/CareersPage";
 import FAQPage from "./pages/FAQPage";
 import GalleryPage from "./pages/GalleryPage";
+import EventDetailsPage from "./pages/EventDetailsPage";
+
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/events/:eventId" element={<EventDetailsPage />} />
+         
         {/* <Route path="/blog" element={<BlogPage />} /> */}
       </Routes>
     </Router>
