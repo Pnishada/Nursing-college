@@ -12,8 +12,14 @@ import EventsPage from "./pages/EventsPage";
 import CareersPage from "./pages/CareersPage";
 import FAQPage from "./pages/FAQPage";
 import GalleryPage from "./pages/GalleryPage";
+<<<<<<< HEAD
 import EventDetailsPage from "./pages/EventDetailsPage";
 
+=======
+import Contact from "./pages/contact";
+import AboutPage from "./pages/AboutPage";
+import DownloadsPage from "./pages/DownloadsPage";
+>>>>>>> b4efcd9 (First Commit)
 
 function App() {
   return (
@@ -22,8 +28,8 @@ function App() {
 
         <Route path="/" element={<Home />} />
         <Route path="/programs" element={<ProgramsPage />} />
-        <Route path="/apply" element={<ApplyPage/>}/>
-        <Route path="/about" element={<About />} />
+        <Route path="/apply" element={<ApplyPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/news/:id" element={<NewsDetailPage />} />
         <Route path="/faculty" element={<FacultyPage />} />
@@ -32,8 +38,13 @@ function App() {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+<<<<<<< HEAD
         <Route path="/events/:eventId" element={<EventDetailsPage />} />
          
+=======
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/downloads" element={<DownloadsPage />} />
+>>>>>>> b4efcd9 (First Commit)
         {/* <Route path="/blog" element={<BlogPage />} /> */}
       </Routes>
     </Router>
