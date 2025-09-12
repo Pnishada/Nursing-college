@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "../components/homepageComponents/Navbar";
 import Footer from "../components/homepageComponents/Footer";
@@ -44,7 +44,7 @@ const events: Event[] = [
 
 export default function EventDetailsPage() {
   const { eventId } = useParams<{ eventId: string }>();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const event = events.find((e) => e.id === eventId);
 
   if (!event)
@@ -63,13 +63,7 @@ export default function EventDetailsPage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      {/* Back Button */}
-      <button
-        onClick={() => navigate(-1)}
-        className="fixed top-6 left-6 z-50 bg-white/90 backdrop-blur-md text-blue-600 px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition"
-      >
-        ← Back to Events
-      </button>
+     
 
       {/* Hero Section with Frosted Glass Info */}
       <div className="relative rounded-3xl overflow-hidden shadow-2xl">

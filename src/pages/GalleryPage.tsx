@@ -6,22 +6,22 @@ import Footer from "../components/homepageComponents/Footer";
 export default function GalleryPage() {
   const images = [
   { 
-    url: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8hOGq8fVaddjTwC5XRwFbnyitORxIgzUGTg&s",
     title: "Workshop Moment",
     description: "Capturing our interactive workshops."
   },
   { 
-    url: "https://images.unsplash.com/photo-1524492449090-0b3be6ab1c8b?auto=format&fit=crop&w=800&q=80",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUcx4s4n1nmw-NzchLwbsaovmaBxhcabI9rQ&s",
     title: "Campus Life",
     description: "Students enjoying campus activities."
   },
   { 
-    url: "https://images.unsplash.com/photo-1503437313881-503a91226419?auto=format&fit=crop&w=800&q=80",
+    url: "https://cdn.uconnectlabs.com/wp-content/uploads/sites/7/2017/09/SpringCareerFair_08-840x560.jpg?v=23427",
     title: "Career Fair",
     description: "Networking with top recruiters."
   },
   { 
-    url: "https://images.unsplash.com/photo-1581092160621-6f2f8a7ff8e2?auto=format&fit=crop&w=800&q=80",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUcDeJNSSuhBxn3scfo1glqSyDL2zFQGX5ZA&s",
     title: "Health Seminar",
     description: "Learning about wellness and mental health."
   },
@@ -35,7 +35,7 @@ export default function GalleryPage() {
     <Navbar/>
     <section className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-16 px-6">
       <div className="max-w-5xl mx-auto text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-blue-800 mb-4">Gallery</h1>
+        <h1 className="text-6xl font-extrabold text-blue-800 mb-4">Gallery</h1>
         <p className="text-gray-500 text-lg">
           Explore moments from our workshops, events, and campus life.
         </p>

@@ -13,14 +13,15 @@ import Contact from "./pages/contact";
 import AboutPage from "./pages/AboutPage";
 import DownloadsPage from "./pages/DownloadsPage";
 import BlogPage from "./pages/BlogPage";
-import { Home } from "lucide-react";
+import StudentLifeDashboard from "./pages/StudentLifePage";
+import CareersPage from "./pages/CareersPage";
+
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/programs" element={<ProgramsPage />} />
         <Route path="/apply" element={<ApplyPage />} />
@@ -35,6 +36,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/downloads" element={<DownloadsPage />} />
          <Route path="/blog" element={<BlogPage />} /> 
+         <Route path="/student-life" element={<StudentLifeDashboard />} />
+         <Route path="/careers" element={<CareersPage />} /> 
         
       </Routes>
     </Router>
