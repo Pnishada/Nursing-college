@@ -3,6 +3,8 @@ import React, { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Search, ChevronRight } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
+import Navbar from "../components/homepageComponents/Navbar";
+import Footer from "../components/homepageComponents/Footer";
 
 interface Program {
   id: string;
@@ -273,6 +275,8 @@ export default function ProgramsPage() {
   };
 
   return (
+    <>
+    <Navbar/>
     <main className="px-6 md:px-12 py-12">
       <section className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
@@ -352,5 +356,7 @@ export default function ProgramsPage() {
 
       <ProgramModal program={selectedProgram} onClose={handleCloseModal} />
     </main>
+    <Footer/>
+    </>
   );
 }

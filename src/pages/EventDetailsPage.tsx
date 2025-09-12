@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import Navbar from "../components/homepageComponents/Navbar";
+import Footer from "../components/homepageComponents/Footer";
 
 interface Event {
   id: string;
@@ -53,6 +55,8 @@ export default function EventDetailsPage() {
     );
 
   return (
+    <>
+    <Navbar/>
     <motion.section
       className="max-w-6xl mx-auto px-6 py-16 space-y-16"
       initial={{ opacity: 0 }}
@@ -155,5 +159,7 @@ export default function EventDetailsPage() {
         </motion.div>
       )}
     </motion.section>
+    <Footer/>
+    </>
   );
 }

@@ -20,6 +20,7 @@ export default function Navbar(): React.ReactElement {
     { name: "Gallery", path: "/gallery" },
     { name: "Downloads", path: "/downloads" },
     { name: "Contact", path: "/contact" },
+    { name: "News", path: "/news" },
     // optional
     // { name: "Blog", path: "/blog" },
   ];

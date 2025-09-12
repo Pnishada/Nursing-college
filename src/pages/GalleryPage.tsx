@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import GallerySlider from "../components/common/GallerySlider";
+import Navbar from "../components/homepageComponents/Navbar";
+import Footer from "../components/homepageComponents/Footer";
 
 export default function GalleryPage() {
   const images = [
@@ -29,6 +31,8 @@ export default function GalleryPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
+    <>
+    <Navbar/>
     <section className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-16 px-6">
       <div className="max-w-5xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-extrabold text-blue-800 mb-4">Gallery</h1>
@@ -62,5 +66,7 @@ export default function GalleryPage() {
         ))}
       </div>
     </section>
+    <Footer/>
+    </>
   );
 }

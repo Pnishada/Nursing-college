@@ -1,6 +1,8 @@
 
 import React from "react";
 import BlogCard from "../components/common/BlogCard";
+import Navbar from "../components/homepageComponents/Navbar";
+import Footer from "../components/homepageComponents/Footer";
 
 
 export default function BlogPage() {
@@ -20,6 +22,8 @@ export default function BlogPage() {
   ];
 
   return (
+    <>
+    <Navbar/>
     <div className="max-w-6xl mx-auto px-6 py-12">
       <h1 className="text-3xl font-bold text-blue-700 mb-8">Blog</h1>
       <div className="grid sm:grid-cols-2 gap-6">
@@ -28,5 +32,7 @@ export default function BlogPage() {
         ))}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

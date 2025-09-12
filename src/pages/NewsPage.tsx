@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../components/homepageComponents/Navbar";
+import Footer from "../components/homepageComponents/Footer";
 
 const allNews = [
   {
@@ -91,6 +93,8 @@ export default function NewsPage() {
   const otherNews = filteredNews.length > 1 ? filteredNews.slice(1) : [];
 
   return (
+    <>
+    <Navbar/>
     <section className="bg-gray-50 min-h-screen px-6 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10">
 
@@ -184,5 +188,7 @@ export default function NewsPage() {
         </aside>
       </div>
     </section>
+    <Footer/>
+    </>
   );
 }

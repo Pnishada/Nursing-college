@@ -1,36 +1,112 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FiChevronDown } from "react-icons/fi";
 
 export default function Footer(): React.ReactElement {
+  const [openLinks, setOpenLinks] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
+
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/programs", label: "Programs" },
+    { to: "/apply", label: "Apply" },
+    { to: "/about", label: "About Us" },
+    { to: "/news", label: "News" },
+    { to: "/faculty", label: "Faculty" },
+    { to: "/student-life", label: "Student Life" },
+    { to: "/events", label: "Events" },
+    { to: "/careers", label: "Careers" },
+    { to: "/faq", label: "FAQ" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/contact", label: "Contact" },
+  ];
+
   return (
-    <footer className="bg-blue-900 text-white">
-      <div className="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+    <footer className="bg-gradient-to-b from-blue-950 to-blue-900 text-gray-100 text-sm">
+      <div className="max-w-7xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-10">
+        {/* About */}
         <div>
-          <h4 className="text-lg font-semibold mb-3">Institute of Nursing</h4>
-          <p className="text-gray-200">
-            Building the future of healthcare through education, compassion and innovation.
+          <h4 className="text-lg font-bold text-white mb-3">Institute of Nursing</h4>
+          <p className="text-gray-200 leading-relaxed text-sm">
+            Building the future of healthcare through education, compassion, and innovation.
           </p>
         </div>
 
+        {/* Quick Links */}
         <div>
-          <h4 className="text-lg font-semibold mb-3">Quick links</h4>
-          <ul className="space-y-2 text-gray-200">
-            <li><Link to="/programs">Programs</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/news">News</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
+          <button
+            onClick={() => setOpenLinks(!openLinks)}
+            className="flex justify-between items-center w-full md:cursor-default md:pointer-events-none"
+          >
+            <h4 className="text-lg font-bold text-white">Quick Links</h4>
+            <FiChevronDown
+              className={`md:hidden transition-transform ${openLinks ? "rotate-180" : ""}`}
+            />
+          </button>
+          <div
+            className={`mt-3 grid grid-cols-1 md:grid-cols-2 gap-x-10 text-gray-200 overflow-hidden transition-all duration-300 ${
+              openLinks ? "max-h-96" : "max-h-0 md:max-h-full"
+            }`}
+          >
+            {links.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="py-1 block transition-all duration-200 hover:text-white hover:font-bold hover:underline"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
 
+        {/* Contact */}
         <div>
-          <h4 className="text-lg font-semibold mb-3">Contact</h4>
-          <p className="text-gray-200">📍 Colombo, Sri Lanka</p>
-          <p className="text-gray-200">📞 +94 71 234 5678</p>
-          <p className="text-gray-200">✉ info@nursinginstitute.lk</p>
+          <button
+            onClick={() => setOpenContact(!openContact)}
+            className="flex justify-between items-center w-full md:cursor-default md:pointer-events-none"
+          >
+            <h4 className="text-lg font-bold text-white">Contact</h4>
+            <FiChevronDown
+              className={`md:hidden transition-transform ${openContact ? "rotate-180" : ""}`}
+            />
+          </button>
+          <div
+            className={`mt-3 space-y-2 overflow-hidden transition-all duration-300 ${
+              openContact ? "max-h-96" : "max-h-0 md:max-h-full"
+            }`}
+          >
+            <p className="text-gray-200">📍 Colombo, Sri Lanka</p>
+            <p className="text-gray-200">📞 +94 71 234 5678</p>
+            <p className="text-gray-200">✉ info@nursinginstitute.lk</p>
+
+            {/* Social */}
+            <div className="flex gap-3 mt-4">
+              {[
+                { icon: <FaFacebookF />, href: "https://facebook.com", color: "hover:bg-blue-600" },
+                { icon: <FaTwitter />, href: "https://twitter.com", color: "hover:bg-sky-500" },
+                { icon: <FaInstagram />, href: "https://instagram.com", color: "hover:bg-pink-500" },
+                { icon: <FaLinkedinIn />, href: "https://linkedin.com", color: "hover:bg-blue-500" },
+                { icon: <FaYoutube />, href: "https://youtube.com", color: "hover:bg-red-600" },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-9 h-9 flex items-center justify-center rounded-full bg-blue-800 text-white transition-all hover:scale-110 ${social.color}`}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="border-t border-blue-800 text-center text-gray-300 py-4">
+      {/* Bottom */}
+      <div className="border-t border-blue-800 text-center text-gray-300 py-3 text-xs">
         © {new Date().getFullYear()} Institute of Nursing. All rights reserved.
       </div>
     </footer>

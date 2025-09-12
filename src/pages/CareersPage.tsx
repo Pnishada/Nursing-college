@@ -1,4 +1,6 @@
 import React from "react";
+import Footer from "../components/homepageComponents/Footer";
+import Navbar from "../components/homepageComponents/Navbar";
 
 const careersData = [
   {
@@ -46,6 +48,8 @@ const timelineData = [
 
 export default function CareersPage() {
   return (
+    <>
+    <Navbar/>
     <section className="max-w-7xl mx-auto px-6 py-16 space-y-16">
       {/* Header */}
       <div className="text-center">
@@ -109,5 +113,7 @@ export default function CareersPage() {
         />
       </div>
     </section>
+    <Footer/>
+    </>
   );
 }

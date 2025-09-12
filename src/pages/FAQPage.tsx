@@ -1,5 +1,7 @@
 import React from "react";
 import FAQAccordion from "../components/common/FAQAccordion";
+import Navbar from "../components/homepageComponents/Navbar";
+import Footer from "../components/homepageComponents/Footer";
 
 export default function FAQPage() {
   const faqs = [
@@ -31,6 +33,8 @@ export default function FAQPage() {
   ];
 
   return (
+    <>
+    <Navbar/>
     <section className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-16 px-6">
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-extrabold text-blue-800 mb-4">Frequently Asked Questions</h1>
@@ -45,5 +49,7 @@ export default function FAQPage() {
         ))}
       </div>
     </section>
+    <Footer/>
+    </>
   );
 }

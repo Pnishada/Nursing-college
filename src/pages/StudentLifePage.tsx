@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Card from "../components/common/StudentCard";
+import Navbar from "../components/homepageComponents/Navbar";
+import Footer from "../components/homepageComponents/Footer";
 
 const data = {
   facilities: [
@@ -75,6 +77,8 @@ export default function StudentLifeDashboard() {
       : "https://images.unsplash.com/photo-1551836022-d5d88e9218df";
 
   return (
+    <>
+    <Navbar/>
     <section className={`max-w-7xl mx-auto px-6 py-16 rounded-3xl ${sectionBg} transition-all duration-500`}>
       {/* Page Header */}
       <div className="text-center mb-12">
@@ -117,5 +121,7 @@ export default function StudentLifeDashboard() {
       {/* Cards */}
       <div className="transition-all duration-500">{renderCards()}</div>
     </section>
+    <Footer/>
+    </>
   );
 }

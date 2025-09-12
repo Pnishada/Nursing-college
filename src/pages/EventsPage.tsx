@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import EventCard from "../components/common/EventCard";
+import Navbar from "../components/homepageComponents/Navbar";
+import Footer from "../components/homepageComponents/Footer";
 
 export default function EventsPage() {
   const navigate = useNavigate();
@@ -49,6 +51,8 @@ export default function EventsPage() {
   };
 
   return (
+    <>
+    <Navbar/>
     <section className="max-w-7xl mx-auto px-6 py-16 space-y-16">
       {/* Header */}
       <div className="text-center mb-12">
@@ -112,5 +116,7 @@ export default function EventsPage() {
         ))}
       </div>
     </section>
+    <Footer/>
+    </>
   );
 }

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import FacultyCard from "../components/common/FacultyCard";
+import Footer from "../components/homepageComponents/Footer";
+import Navbar from "../components/homepageComponents/Navbar";
 
 interface FacultySection {
   title: string;
@@ -88,6 +90,8 @@ export default function FacultyPage() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="max-w-7xl mx-auto px-6 py-16 space-y-12">
       <h1 className="text-5xl font-extrabold text-blue-800 text-center mb-12">
         Our Faculties
@@ -135,5 +139,7 @@ export default function FacultyPage() {
         </div>
       ))}
     </div>
+    <Footer/>
+    </>
   );
 }

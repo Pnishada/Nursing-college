@@ -1,5 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import Navbar from "../components/homepageComponents/Navbar";
+import Footer from "../components/homepageComponents/Footer";
 
 const allNews = [
   { id: 1, title: "New Nursing Diploma Intake Open", date: "Sept 5, 2025", description: "Applications are now open for the upcoming nursing diploma. Enroll now to start your career in healthcare.", category: "Admissions", image: "https://source.unsplash.com/800x400/?healthcare,nursing" },
@@ -17,6 +19,8 @@ export default function NewsDetailPage() {
   const relatedNews = allNews.filter((n) => n.id !== news.id).slice(0, 3);
 
   return (
+    <>
+    <Navbar/>
     <section className="bg-gray-50 min-h-screen px-6 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10">
 
@@ -91,5 +95,7 @@ export default function NewsDetailPage() {
         </aside>
       </div>
     </section>
+    <Footer/>
+    </>
   );
 }
