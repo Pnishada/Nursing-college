@@ -8,9 +8,9 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100">
+      <div className="w-full min-h-screen bg-gradient-to-b from-blue-100 via-white to-blue-100">
         {/* Hero Section */}
-        <section className="relative h-[90vh] flex items-center justify-center text-center bg-gradient-to-r from-blue-600 to-indigo-700">
+        <section className="relative h-[90vh] flex items-center justify-center text-center bg-gradient-to-b from-blue-400 via-white to-blue-600">
           <div className="absolute inset-0 bg-black/40"></div>
           <motion.div
             className="relative z-10 max-w-3xl px-6"
@@ -49,7 +49,7 @@ const AboutPage: React.FC = () => {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 1.1 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
@@ -79,7 +79,7 @@ const AboutPage: React.FC = () => {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 1.1 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
@@ -97,10 +97,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Who We Are */}
-        <section
-          id="who-we-are"
-          className="relative py-20 bg-white overflow-hidden"
-        >
+        <section id="who-we-are" className="relative py-20 bg-white overflow-hidden">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
             {/* Collage Images */}
             <motion.div
@@ -111,19 +108,23 @@ const AboutPage: React.FC = () => {
               className="grid grid-cols-2 gap-4"
             >
               <img
-                src="https://images.unsplash.com/photo-1588776814546-5b4b9a3cba52?auto=format&fit=crop&w=800&q=80"
+                src="https://content.jdmagicbox.com/v2/comp/purulia/i8/9999p3252.3252.230607145341.x9i8/catalogue/deepsikha-nursing-institute-deoli-purulia-colleges-8u9n1b4lo0.jpg"
+                alt="Nursing training 1"
                 className="rounded-2xl shadow-lg"
               />
               <img
-                src="https://images.unsplash.com/photo-1616587894289-0f8ee8baf512?auto=format&fit=crop&w=800&q=80"
+                src="https://www.durdans.com/wp-content/uploads/2017/06/Nurse-training3.jpg"
+                alt="Nursing training 2"
                 className="rounded-2xl shadow-lg mt-8"
               />
               <img
-                src="https://images.unsplash.com/photo-1629904853893-c2c8981a1a06?auto=format&fit=crop&w=800&q=80"
+                src="https://www.shivamgroupofinstitutions.com/img/courses/courses-details-2.jpg"
+                alt="Nursing training 3"
                 className="rounded-2xl shadow-lg"
               />
               <img
-                src="https://images.unsplash.com/photo-1618510970880-65fe6c59e9b0?auto=format&fit=crop&w=800&q=80"
+                src="https://images.jdmagicbox.com/v2/comp/bardhaman/g5/9999px342.x342.250331161310.c6g5/catalogue/deepsikha-nursing-institute-abhirampur-bardhaman-nursing-institutes-xf4eilobuu.jpg"
+                alt="Nursing training 4"
                 className="rounded-2xl shadow-lg mt-8"
               />
             </motion.div>
@@ -135,9 +136,7 @@ const AboutPage: React.FC = () => {
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-extrabold text-gray-900">
-                Who We Are
-              </h2>
+              <h2 className="text-4xl font-extrabold text-gray-900">Who We Are</h2>
               <p className="mt-6 text-gray-700 leading-relaxed">
                 INHT, operating under NAITA, is one of Sri Lanka’s leading
                 government institutions dedicated to vocational education in
@@ -172,7 +171,7 @@ const AboutPage: React.FC = () => {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 1.1 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: index * 0.2 }}
                     viewport={{ once: true }}
@@ -184,9 +183,7 @@ const AboutPage: React.FC = () => {
                       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
                         <item.icon className="w-6 h-6" />
                       </div>
-                      <h3 className="text-lg font-semibold text-gray-800">
-                        {item.title}
-                      </h3>
+                      <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
                     </div>
                   </motion.div>
                 ))}

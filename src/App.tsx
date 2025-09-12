@@ -13,14 +13,14 @@ import Contact from "./pages/contact";
 import AboutPage from "./pages/AboutPage";
 import DownloadsPage from "./pages/DownloadsPage";
 import BlogPage from "./pages/BlogPage";
-import { Home } from "lucide-react";
+import CareersPage from "./pages/CareersPage";
+import StudentLifePage from "./pages/StudentLifePage";
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/programs" element={<ProgramsPage />} />
         <Route path="/apply" element={<ApplyPage />} />
@@ -28,6 +28,8 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/news/:id" element={<NewsDetailPage />} />
         <Route path="/faculty" element={<FacultyPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/student-life" element={<StudentLifePage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
