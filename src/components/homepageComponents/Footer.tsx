@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaMailBulk } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import logo from "../../assets/images/logo/logo.png";
 
@@ -79,21 +79,38 @@ export default function Footer(): React.ReactElement {
             />
           </button>
           <div
-            className={`mt-3 space-y-2 overflow-hidden transition-all duration-300 ${
+            className={`mt-3 flex flex-col gap-3 overflow-hidden transition-all duration-300 ${
               openContact ? "max-h-96" : "max-h-0 md:max-h-full"
             }`}
           >
-            <p className="text-gray-200">📍 Colombo, Sri Lanka</p>
-            <p className="text-gray-200">📞 +94 71 234 5678</p>
-            <p className="text-gray-200">✉ info@nursinginstitute.lk</p>
+            {/* Address */}
+            <div className="flex items-start gap-2">
+              <span className="text-xl">📍</span>
+              <span>
+                07, Dr. Danster De Silva Mawatha,<br />
+                Orugodawatta, Wellampitiya, Colombo, Sri Lanka
+              </span>
+            </div>
 
-            {/* Social */}
-            <div className="flex gap-3 mt-4">
+            {/* Phone */}
+            <div className="flex items-center gap-2">
+              <span className="text-xl">📞</span>
+              <span>+94 112 533 547</span>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-center gap-2">
+              <span className="text-xl">✉</span>
+              <span>info@nursinginstitute.lk</span>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex gap-3 mt-2">
               {[
-                { icon: <FaFacebookF />, href: "https://facebook.com", color: "hover:bg-blue-600" },
+                { icon: <FaFacebookF />, href: "https://www.facebook.com/share/19McXUwmLG/?mibextid=wwXIfr", color: "hover:bg-blue-600" },
                 { icon: <FaTwitter />, href: "https://twitter.com", color: "hover:bg-sky-500" },
                 { icon: <FaInstagram />, href: "https://instagram.com", color: "hover:bg-pink-500" },
-                { icon: <FaLinkedinIn />, href: "https://linkedin.com", color: "hover:bg-blue-500" },
+                { icon: <FaMailBulk />, href: "mailto:inhct.naita@gmail.com", color: "hover:bg-blue-500" },
                 { icon: <FaYoutube />, href: "https://youtube.com", color: "hover:bg-red-600" },
               ].map((social, idx) => (
                 <a

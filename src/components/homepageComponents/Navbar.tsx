@@ -1,9 +1,8 @@
-// src/components/homepageComponents/Navbar.tsx
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "../../assets/images/logo/logo.png"; // ✅ Corrected path
+import Logo from "../../assets/images/logo/logo.png"; 
 
 export default function Navbar(): React.ReactElement {
   const [open, setOpen] = useState(false);

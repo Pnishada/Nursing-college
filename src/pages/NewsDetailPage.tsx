@@ -4,7 +4,7 @@ import Navbar from "../components/homepageComponents/Navbar";
 import Footer from "../components/homepageComponents/Footer";
 
 const allNews = [
-  { id: 1, title: "New Nursing Diploma Intake Open", date: "Sept 5, 2025", description: "Applications are now open for the upcoming nursing diploma. Enroll now to start your career in healthcare.", category: "Admissions", image: "https://source.unsplash.com/800x400/?healthcare,nursing" },
+  { id: 1, title: "New Nursing Diploma Intake Open", date: "Sept 5, 2025", description: "Applications are now open for the upcoming nursing diploma. Enroll now to start your career in healthcare.", category: "Admissions", image: "https://forwardacademicteam.com/wp-content/uploads/2024/11/upcoming-intakes-2025-forward-academic-team.jpg" },
   { id: 2, title: "Institute Receives National Accreditation", date: "Aug 20, 2025", description: "Our institute has received national accreditation for our outstanding nursing programs.", category: "Accreditation", image: "https://source.unsplash.com/800x400/?certificate,education" },
   { id: 3, title: "Free Healthcare Workshop Announced", date: "July 10, 2025", description: "Join our free healthcare workshop to gain practical knowledge in patient care and safety.", category: "Workshop", image: "https://source.unsplash.com/800x400/?workshop,healthcare" },
   { id: 4, title: "Alumni Meet 2025 Scheduled", date: "June 15, 2025", description: "Connect with our alumni and hear their inspiring success stories.", category: "Alumni", image: "https://source.unsplash.com/800x400/?alumni,meeting" },

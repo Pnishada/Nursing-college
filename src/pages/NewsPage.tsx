@@ -10,7 +10,7 @@ const allNews = [
     date: "Sept 5, 2025",
     category: "Admissions",
     description: "Applications are now open for the upcoming nursing diploma. Enroll now to start your career in healthcare.",
-    image: "https://images.unsplash.com/photo-1588776814546-6c3e32d252db?auto=format&fit=crop&w=800&q=80"
+    image: "https://forwardacademicteam.com/wp-content/uploads/2024/11/upcoming-intakes-2025-forward-academic-team.jpg"
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const allNews = [
     date: "Aug 20, 2025",
     category: "Accreditation",
     description: "Our institute has received national accreditation for our outstanding nursing programs.",
-    image: "https://images.unsplash.com/photo-1606813908914-4d29ec52bb0b?auto=format&fit=crop&w=800&q=80"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDb7hcdFZnCOXi2osCtfAl6JXng5GLxhcnSw&s"
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const allNews = [
     date: "July 10, 2025",
     category: "Workshop",
     description: "Join our free healthcare workshop to gain practical knowledge in patient care and safety.",
-    image: "https://images.unsplash.com/photo-1588776814380-411cc0c95a35?auto=format&fit=crop&w=800&q=80"
+    image: "https://www.shutterstock.com/image-photo/team-asian-doctors-illustrates-results-260nw-2292269351.jpg"
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const allNews = [
     date: "June 15, 2025",
     category: "Alumni",
     description: "Connect with our alumni and hear their inspiring success stories.",
-    image: "https://images.unsplash.com/photo-1596496052532-cd64ed94fbe0?auto=format&fit=crop&w=800&q=80"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxqyn_8KL5IAznDJuKSRG_uvuLm8NQMrlX1w&s"
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const allNews = [
     date: "May 30, 2025",
     category: "Admissions",
     description: "Explore our newly launched online nursing courses and enhance your skills from home.",
-    image: "https://images.unsplash.com/photo-1588776814286-2d9872a07197?auto=format&fit=crop&w=800&q=80"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn32kbDX734gGA__Th_Apvzvt9NuHtGP7olg&s"
   },
   {
     id: 6,
