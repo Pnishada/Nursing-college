@@ -40,6 +40,7 @@ function App() {
         <Route path="/blog" element={<BlogPage />} /> 
         <Route path="/student-life" element={<StudentLifeDashboard />} />
         <Route path="/careers" element={<CareersPage />} /> 
+        <Route path="/downloads/:programId/:version" element={<DownloadsPage />} />
         
       </Routes>
     </Router>

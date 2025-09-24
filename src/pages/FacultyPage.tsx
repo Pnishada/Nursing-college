@@ -26,20 +26,7 @@ const facultyData: FacultySection[] = [
       "Obstetrics & Gynecological Nursing (Midwifery)",
       "Geriatric Nursing",
     ],
-    members: [
-      {
-        name: "Dr. Anura Perera",
-        title: "Senior Lecturer",
-        qualification: "PhD in Nursing",
-        photo: "https://randomuser.me/api/portraits/men/32.jpg",
-      },
-      {
-        name: "Ms. Sanduni Silva",
-        title: "Clinical Instructor",
-        qualification: "MSc in Nursing",
-        photo: "https://randomuser.me/api/portraits/women/44.jpg",
-      },
-    ],
+    members: [],
   },
   {
     title: "Supporting Faculties / Allied Health",
@@ -75,6 +62,30 @@ const facultyData: FacultySection[] = [
       "E-Health / Telemedicine",
     ],
     members: [],
+  },
+  {
+    title: "Staff",
+    departments: ["Administrative Staff",],
+    members: [
+      {
+        name: "K D D I Wimalanatha",
+        title: "Head Of the Department",
+        qualification: " ",
+        photo: " ",
+      },
+      {
+        name: "P A T S Jayawardana",
+        title: "	Inspector",
+        qualification: " ",
+        photo: " ",
+      },
+      {
+        name: "W D G R H Kumarathunga",
+        title: "	Office Aid ",
+        qualification: " ",
+        photo: " ",
+      },
+    ],
   },
 ];
 

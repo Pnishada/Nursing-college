@@ -54,7 +54,7 @@ export default function Navbar(): React.ReactElement {
             alt="Nursing Institute Logo"
             className="h-10 w-10 object-cover"
           />
-          <span className="text-2xl font-bold text-blue-600">Nursing Institute</span>
+          <span className="text-2xl font-bold text-blue-600">INHCT</span>
         </div>
 
         {/* Desktop Menu */}

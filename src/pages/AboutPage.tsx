@@ -4,6 +4,12 @@ import { Building2, Award, Users } from "lucide-react";
 import Footer from "../components/homepageComponents/Footer";
 import Navbar from "../components/homepageComponents/Navbar";
 
+// images import
+import img1 from "../assets/images/_DPP3500.jpg";
+import img2 from "../assets/images/_DPP3379.jpg";
+import img3 from "../assets/images/_DPP3330.jpg";
+import img4 from "../assets/images/_DPP3320.jpg";
+
 const AboutPage: React.FC = () => {
   return (
     <>
@@ -25,9 +31,8 @@ const AboutPage: React.FC = () => {
               </span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-200 leading-relaxed">
-              The Institute of Nursing & Healthcare Training (INHT) shapes
-              competent, compassionate professionals through world-class
-              education and practical training.
+              The Institute of Nursing and Healthcare Training (INHCT) offers
+              high-quality vocational education in nursing..
             </p>
             <motion.a
               href="#who-we-are"
@@ -70,11 +75,11 @@ const AboutPage: React.FC = () => {
             {[
               {
                 title: "Our Mission",
-                text: "To train competent, compassionate healthcare professionals through quality education, practical skills, and ethical practice.",
+                text: "To provide high-quality vocational and technical training for youth, enabling them to acquire employable skills through well-structured programs that meet the highest professional standards and fulfill the skilled manpower needs of industry.",
               },
               {
                 title: "Our Vision",
-                text: "To be a leading center of excellence in nursing and healthcare training, inspiring professionals to advance global health.",
+                text: "To become the most efficient training organization, effectively contributing to Sri Lanka’s prosperity through the development of skilled human resources.",
               },
             ].map((item, index) => (
               <motion.div
@@ -85,12 +90,8 @@ const AboutPage: React.FC = () => {
                 viewport={{ once: true }}
                 className="p-10 rounded-2xl bg-white/70 backdrop-blur-xl border border-blue-100 shadow-lg"
               >
-                <h2 className="text-2xl font-bold text-blue-700">
-                  {item.title}
-                </h2>
-                <p className="mt-4 text-gray-700 leading-relaxed">
-                  {item.text}
-                </p>
+                <h2 className="text-2xl font-bold text-blue-700">{item.title}</h2>
+                <p className="mt-4 text-gray-700 leading-relaxed">{item.text}</p>
               </motion.div>
             ))}
           </div>
@@ -107,26 +108,10 @@ const AboutPage: React.FC = () => {
               viewport={{ once: true }}
               className="grid grid-cols-2 gap-4"
             >
-              <img
-                src="https://content.jdmagicbox.com/v2/comp/purulia/i8/9999p3252.3252.230607145341.x9i8/catalogue/deepsikha-nursing-institute-deoli-purulia-colleges-8u9n1b4lo0.jpg"
-                alt="Nursing training 1"
-                className="rounded-2xl shadow-lg"
-              />
-              <img
-                src="https://www.durdans.com/wp-content/uploads/2017/06/Nurse-training3.jpg"
-                alt="Nursing training 2"
-                className="rounded-2xl shadow-lg mt-8"
-              />
-              <img
-                src="https://www.shivamgroupofinstitutions.com/img/courses/courses-details-2.jpg"
-                alt="Nursing training 3"
-                className="rounded-2xl shadow-lg"
-              />
-              <img
-                src="https://images.jdmagicbox.com/v2/comp/bardhaman/g5/9999px342.x342.250331161310.c6g5/catalogue/deepsikha-nursing-institute-abhirampur-bardhaman-nursing-institutes-xf4eilobuu.jpg"
-                alt="Nursing training 4"
-                className="rounded-2xl shadow-lg mt-8"
-              />
+              <img src={img1} alt="Nursing training 1" className="rounded-2xl shadow-lg" />
+              <img src={img2} alt="Nursing training 2" className="rounded-2xl shadow-lg mt-8" />
+              <img src={img3} alt="Nursing training 3" className="rounded-2xl shadow-lg" />
+              <img src={img4} alt="Nursing training 4" className="rounded-2xl shadow-lg mt-8" />
             </motion.div>
 
             {/* Text */}
@@ -138,15 +123,17 @@ const AboutPage: React.FC = () => {
             >
               <h2 className="text-4xl font-extrabold text-gray-900">Who We Are</h2>
               <p className="mt-6 text-gray-700 leading-relaxed">
-                INHT, operating under NAITA, is one of Sri Lanka’s leading
-                government institutions dedicated to vocational education in
-                the healthcare sector. We offer both full-time and part-time
-                study options, as well as short-term courses like First Aid and
-                CPR.
-              </p>
-              <p className="mt-4 text-gray-700 leading-relaxed">
-                Our focus is on practical, hands-on training to build
-                competence, compassion, and professionalism.
+                The Institute of Nursing and Healthcare Training (INHCT),
+                registered under P01/1017, is a leading provider of high-quality
+                vocational education in nursing and caregiving, offering both
+                full-time and part-time programs in English. Committed to
+                international standards, the institute focuses on equipping
+                students with professional skills and practical experience to
+                excel in the healthcare field. In addition, through its Industry
+                Collaborative Apprenticeship Training Center, registered under
+                P01/1016, INHCT strengthens hands-on learning opportunities and
+                industry partnerships to ensure graduates are job-ready and
+                aligned with global healthcare demands.
               </p>
             </motion.div>
           </div>
@@ -183,7 +170,9 @@ const AboutPage: React.FC = () => {
                       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
                         <item.icon className="w-6 h-6" />
                       </div>
-                      <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
+                      <h3 className="text-lg font-semibold text-gray-800">
+                        {item.title}
+                      </h3>
                     </div>
                   </motion.div>
                 ))}

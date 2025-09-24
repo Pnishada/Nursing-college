@@ -9,27 +9,37 @@ import Footer from "../components/homepageComponents/Footer";
 export default function DownloadsPage() {
   const downloads = [
     {
-      title: "Admission Brochure 2025",
+      title: "Nurse NVQ Level 06 Modules – Version 0",
       fileUrl: "/files/brochure.pdf",
       description: "Full details about our programs, facilities, and student life.",
     },
     {
-      title: "Application Form",
+      title: "Nurse NVQ Level 06 Modules – Version 1",
       fileUrl: "/files/application-form.pdf",
       description: "Download, fill, and submit this form to apply for admission.",
     },
     {
-      title: "Course Syllabus",
+      title: "Caregiver NVQ Level 03 Modules - version 0",
       fileUrl: "/files/syllabus.pdf",
       description: "Get the latest syllabus covering all academic modules and training sessions.",
     },
     {
-      title: "Information Guide",
+      title: "Caregiver NVQ Level 03 Modules - version 1",
       fileUrl: "/files/information-guide.pdf",
       description: "Comprehensive guide to our institution and programs.",
     },
     {
-      title: "New Updates 2025",
+      title: "Caregiver NVQ Level 04 Modules - version 0",
+      fileUrl: "/files/new-updates-2025.pdf",
+      description: "Latest news and updates about our courses and facilities.",
+    },
+    {
+      title: "Caregiver NVQ Level 04 Modules - version 1",
+      fileUrl: "/files/new-updates-2025.pdf",
+      description: "Latest news and updates about our courses and facilities.",
+    },
+    {
+      title: "Telecommunication Technician NVQ Level 04 - version 1",
       fileUrl: "/files/new-updates-2025.pdf",
       description: "Latest news and updates about our courses and facilities.",
     },

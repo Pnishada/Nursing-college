@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import heroImg from "../../assets/images/_DPP3400.jpg";
 
 export default function Hero() {
   return (
@@ -23,9 +24,9 @@ export default function Hero() {
           </Link>
 
           <Link to="/apply?program=Nursing">
-          <button className="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition">
-            Apply Now
-          </button>
+            <button className="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition">
+              Apply Now
+            </button>
           </Link>
         </div>
       </div>
@@ -33,7 +34,7 @@ export default function Hero() {
       {/* Right Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
         <img
-          src="https://media.istockphoto.com/id/855597368/photo/attentive-nursing-students-in-class.jpg?s=612x612&w=0&k=20&c=YXBArDLBGy8opdwrYlk_19C2GP98qF-GmnGSjagkPVM="
+          src={heroImg}
           alt="Nursing Students"
           className="w-full max-w-md rounded-lg shadow-lg"
         />

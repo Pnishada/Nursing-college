@@ -102,7 +102,7 @@ export default function Footer(): React.ReactElement {
             {/* Email */}
             <div className="flex items-center gap-2">
               <span className="text-xl">✉</span>
-              <span>info@nursinginstitute.lk</span>
+              <span>INHT.Orugodwatta@naita.gov.lk</span>
             </div>
 
             {/* Social Icons */}

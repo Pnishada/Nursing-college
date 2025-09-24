@@ -74,19 +74,19 @@ export default function Contact() {
               {
                 icon: <MapPin className="w-6 h-6 text-white" />,
                 title: "Our Location",
-                text: "Siri Uttarananda Mawatha, Colombo",
+                text: "No.07, Dr. Danister De Silva Mawatha, Orugodawatta, Wellampitiya",
                 color: "from-pink-500 to-rose-600",
               },
               {
                 icon: <Phone className="w-6 h-6 text-white" />,
                 title: "Call Us",
-                text: "+94 11 2 533 547",
+                text: "+9411 2 533 547",
                 color: "from-green-500 to-emerald-600",
               },
               {
                 icon: <Mail className="w-6 h-6 text-white" />,
                 title: "Email Us",
-                text: "info@nursinginstitute.lk",
+                text: "INHT.Orugodwatta@naita.gov.lk",
                 color: "from-blue-500 to-indigo-600",
               },
             ].map((item, index) => (
