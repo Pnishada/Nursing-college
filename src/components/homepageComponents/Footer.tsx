@@ -33,7 +33,7 @@ export default function Footer(): React.ReactElement {
             alt="Institute of Nursing Logo"
             className="h-12 w-auto object-contain"
           />
-          <h4 className="text-lg font-bold text-white mb-3">Institute of Nursing</h4>
+          <h4 className="text-lg font-bold text-white mb-3">Institute of Nursing and Healthcare Training (INHCT)</h4>
           </div>  
           <p className="text-gray-200 leading-relaxed text-sm">
             Building the future of healthcare through education, compassion, and innovation.
